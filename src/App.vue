@@ -20,7 +20,6 @@
 
     import Carousel from './components/carousel/Carousel.vue'
     import CarouselSlide from './components/carousel/CarouselSlide.vue'
-    import swal from 'sweetalert2'
 
     export default {
 
@@ -43,11 +42,12 @@
                 if (this.slides < 9) {
                     this.slides++;
                 } else {
-                    swal({
-                        title: "Désolé..",
-                        text: "Il n'y a plus d'image pour futurama en stock",
-                        imageUrl: "smile2.png"
-                    });
+//                    this.$swal({
+//                        title: "Désolé..",
+//                        text: "Il n'y a plus d'image pour futurama en stock",
+//                        imageUrl: "smile2.png"
+//                    });
+                    alert("Désolé... il n'a plus d'image pour futurama en stock");
                 }
             },
 
@@ -55,11 +55,12 @@
                 if (this.slides > 2) {
                     this.slides--;
                 } else {
-                    swal({
-                        title: "Ooooh...",
-                        text: "On va laisser au moin 2 slides sinon ce n'est plus un carrousel",
-                        imageUrl: "smile.png"
-                    });
+//                    this.$swal({
+//                        title: "Ooooh...",
+//                        text: "On va laisser au moin 2 slides sinon ce n'est plus un carrousel",
+//                        imageUrl: "smile.png"
+//                    });
+                    alert("Ooooh... on va laisser au moin 2 slides sinon ce n'est plus un carousel :)");
                 }
             }
 

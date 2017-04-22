@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 
+require('./assets/sweetAlertPlugin');
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

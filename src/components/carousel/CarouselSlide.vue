@@ -39,6 +39,8 @@
 
 <style>
 
+    @import "/node_modules/sweetalert2/dist/sweetalert2.min.css";
+
     .slide-right-enter-active {
         animation: slideRightIn 2s;
     }
