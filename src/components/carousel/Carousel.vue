@@ -2,8 +2,8 @@
 
     <div>
         <slot></slot>
-        <button class="carousel_nav carousel_next" @click.prevent="next">Suivant</button>
-        <button class="carousel_nav carousel_prev" @click.prevent="prev">Précédent</button>
+        <button class="carousel_nav carousel_next" @click.prevent="next"></button>
+        <button class="carousel_nav carousel_prev" @click.prevent="prev"></button>
     </div>
 
 </template>
@@ -55,3 +55,29 @@
     }
 
 </script>
+
+<style src="./style.css"></style>
+
+<style>
+
+    .carousel {
+        position: relative;
+    }
+
+    .carousel_nav {
+        position: absolute;
+        top: 50%;
+        margin-top: -31px;
+        left: 10px;
+        background: url("prev.png");
+        width: 48px;
+        height: 48px;
+    }
+
+    .carousel_nav.carousel_next {
+        right: 10px;
+        left: auto;
+        background: url("next.png");
+    }
+
+</style>
