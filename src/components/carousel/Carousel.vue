@@ -23,6 +23,16 @@
             }
         },
 
+        watch: {
+
+            slides(slides) {
+                if(this.index >= this.slidesCount) {
+                    this.index = this.slidesCount - 1;
+                }
+            }
+
+        },
+
         mounted() {
             this.slides = this.$children;
         },
