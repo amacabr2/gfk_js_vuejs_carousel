@@ -1,8 +1,10 @@
 <template>
 
-    <div v-show="visible">
-        <slot></slot>
-    </div>
+    <transition name="slide">
+        <div v-show="visible">
+            <slot></slot>
+        </div>
+    </transition>
 
 </template>
 
@@ -27,3 +29,20 @@
     }
 
 </script>
+
+<style>
+
+    .slide-enter-active {
+        animation: slideIn .5s;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+</style>
