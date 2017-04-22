@@ -19,15 +19,12 @@
             return {
                 index: 0,
                 slides: this.$children,
-                direction: null
+                direction: 'right'
             }
         },
 
         mounted() {
             this.slides = this.$children;
-            this.slides.forEach((slide, i) => {
-                slide.index = i;
-            });
         },
 
         computed: {
@@ -111,7 +108,7 @@
     }
 
     .carousel_pagination button.active {
-        background-color: #ffffff;
+        background-color: rgba(108,93,138,0.93)
     }
 
 </style>
