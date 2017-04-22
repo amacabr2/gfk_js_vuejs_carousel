@@ -16,7 +16,7 @@
             return {
                 index: 0,
                 slides: this.$children,
-                direction: 'right'
+                direction: null
             }
         },
 

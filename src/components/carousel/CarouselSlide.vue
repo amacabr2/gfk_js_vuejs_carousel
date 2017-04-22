@@ -25,7 +25,9 @@
             },
 
             transition() {
-                return 'slide-' + this.$parent.direction
+                if (this.$parent.direction) {
+                    return 'slide-' + this.$parent.direction
+                }
             }
 
         }
