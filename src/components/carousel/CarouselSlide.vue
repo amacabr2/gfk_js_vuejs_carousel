@@ -36,12 +36,25 @@
         animation: slideIn .5s;
     }
 
+    .slide-leave-active {
+        animation: slideOut .5s;
+    }
+
     @keyframes slideIn {
         from {
             transform: translateX(100%);
         }
         to {
             transform: translateX(0);
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
         }
     }
 
