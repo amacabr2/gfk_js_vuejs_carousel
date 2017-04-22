@@ -1,28 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+    <div>
+        <carousel>
+            <carousel-slide>
+                Salut les gens
+            </carousel-slide>
+        </carousel>
+    </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+    import Carousel from './components/Carousel'
 
-export default {
-  name: 'app',
-  components: {
-    Hello
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+            Carousel
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
