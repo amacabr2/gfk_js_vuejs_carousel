@@ -22,8 +22,28 @@
         mounted() {
             this.slides = this.$children;
             this.slides.forEach((slide, i) => {
-                slide.index = i
+                slide.index = i;
             });
+        },
+
+        computed: {
+
+            slidesCount() {
+                return this.slides.length;
+            }
+
+        },
+
+        methods: {
+
+            next() {
+                this.index++;
+            },
+
+            prev() {
+                this.index--;
+            }
+
         }
 
     }
