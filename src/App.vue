@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
     import Carousel from './components/carousel/Carousel'
 
     export default {
