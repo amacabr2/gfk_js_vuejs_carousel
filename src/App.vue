@@ -8,13 +8,9 @@
 
         <div class="main">
             <carousel>
-                <carousel-slide>
-                    <div class="text_slide">Salut les gens</div>
-                    <img src="http://lorempicsum.com/futurama/500/200/1" width="100%">
-                </carousel-slide>
-                <carousel-slide>
-                    <div class="text_slide">Au revoir les gens</div>
-                    <img src="http://lorempicsum.com/futurama/500/200/2" width="100%">
+                <carousel-slide v-for="n in slides">
+                    <div class="text_slide">Slide n°{{ n }}</div>
+                    <img :src="'http://lorempicsum.com/futurama/500/200/' + n" width="100%">
                 </carousel-slide>
             </carousel>
         </div>
@@ -29,12 +25,22 @@
     import CarouselSlide from './components/carousel/CarouselSlide.vue'
 
     export default {
+
         name: 'app',
+
         components: {
             Carousel,
             CarouselSlide
+        },
+
+        data() {
+            return {
+                slides: 5,
+            }
         }
+
     }
+
 </script>
 
 <style>
