@@ -2,6 +2,8 @@
 
     <div>
         <slot></slot>
+        <button class="carousel_nav carousel_next" @click.prevent="next">Suivant</button>
+        <button class="carousel_nav carousel_prev" @click.prevent="prev">Précédent</button>
     </div>
 
 </template>
