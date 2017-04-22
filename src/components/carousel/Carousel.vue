@@ -4,6 +4,9 @@
         <slot></slot>
         <button class="carousel_nav carousel_next" @click.prevent="next"></button>
         <button class="carousel_nav carousel_prev" @click.prevent="prev"></button>
+        <div class="carousel_pagination">
+            <button v-for="n in slidesCount" @click="goto(n - 1)" :class="{active: n-1 == index}"></button>
+        </div>
     </div>
 
 </template>
@@ -51,6 +54,11 @@
                 if (this.index < 0) {
                     this.index = this.slidesCount - 1;
                 }
+            },
+
+            goto(index) {
+                this.direction = index > this.index ? 'right' : 'left';
+                this.index = index
             }
 
         }
@@ -65,6 +73,7 @@
 
     .carousel {
         position: relative;
+        overflow: hidden;
     }
 
     .carousel_nav {
@@ -81,6 +90,28 @@
         right: 10px;
         left: auto;
         background: url("next.png");
+    }
+
+    .carousel_pagination {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .carousel_pagination button {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #000000;
+        opacity: 0.8;
+        border-radius: 10px;
+        margin: 0 2px;
+    }
+
+    .carousel_pagination button.active {
+        background-color: #ffffff;
     }
 
 </style>
