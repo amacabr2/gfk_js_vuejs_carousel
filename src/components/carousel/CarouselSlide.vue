@@ -1,6 +1,7 @@
 <template>
 
     <div>
+        Index: {{ index }}
         <slot></slot>
     </div>
 
@@ -9,6 +10,12 @@
 <script>
 
     export default {
+
+        data() {
+            return {
+                index: 0
+            }
+        }
 
     }
 

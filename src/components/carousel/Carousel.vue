@@ -19,6 +19,9 @@
 
         mounted() {
             this.slides = this.$children
+            this.slides.forEach((slide, i) => {
+                slide.index = i
+            })
         }
 
     }
